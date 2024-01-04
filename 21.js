@@ -7,11 +7,9 @@ let selected = 0
 let soma = 0
 
 while(selected < inbox.length){
-
     if (inbox[selected] !== 0){    
        soma = soma + inbox[selected]
     } else{
-
         outbox.push(soma)
         soma = 0
     }
