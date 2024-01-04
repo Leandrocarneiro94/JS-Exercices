@@ -1,6 +1,6 @@
 const inbox = [23, 0]
 
-const outbox = []                  ?
+const outbox = []
 
 let selected = 0
 
@@ -9,18 +9,14 @@ let floor = ['E' ,13 ,'' ,'C' ,23 ,'' ,'' ,'' ,'' ,'' ,'P' ,20 ,'' ,'S' ,3 ,'' ,
 while (selected < inbox.length) {
     let currentAddress = inbox[selected];
 
-    // Traverse the chain until a negative address is encountered
     while (currentAddress >= 0) {
-        // Find the index of the current address in the floor
         const currentIndex = floor.indexOf(currentAddress);
 
-        // If the address is found, add the corresponding data to the outbox
         if (currentIndex !== -1) {
             const currentData = floor[currentIndex - 1];
             outbox.push(currentData);
         }
 
-        // Move to the next address in the chain
         currentAddress = floor[currentIndex + 1];
     }
 

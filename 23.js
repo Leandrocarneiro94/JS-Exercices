@@ -23,7 +23,7 @@ while(selected < inbox.length){
     selected++;
 }
 
-console.log({inbox, outbox}).
+console.log({inbox, outbox})
 
 // OBJETIVO
 // for each zero terminated string in the inbox, 
